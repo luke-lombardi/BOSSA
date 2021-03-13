@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  bossa_container:
+    image: proteus-bossa-dev
+    network_mode: host
+    privileged: true
+    command:
+      ["/bin/bash", "-c", "tail -f /dev/null"]
+    volumes:
+      - ../:/workspace
